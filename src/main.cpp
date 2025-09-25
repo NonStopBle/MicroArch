@@ -9,6 +9,11 @@ void setup() {
 }
 
 void loop() {
+  static uint32_t previous_time = 0;
+  if(millis() - previous_time >= 1000){
+    Serial.println("test");
+    previous_time = millis();
+  }
   // put your main code here, to run repeatedly:
 }
 
